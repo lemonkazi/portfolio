@@ -1,0 +1,115 @@
+@import '../../styles/_variables';
+@import '../../styles/_mixins';
+
+.Navigation {
+  margin: 1% 0;
+  .navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: $color-white;
+    border: none;
+    @include extraSmallBreakpoint {
+      font-size: 1rem;
+      padding-top: 1rem;
+    }
+    .navMenu {
+      display: flex;
+      flex-direction: row;
+
+      li {
+        cursor: pointer;
+      }
+    }
+
+    .schedule-time {
+      color: yellow;
+      animation: mymove 10s infinite;
+    }
+
+    @keyframes mymove {
+      from {color: yellow;}
+      to {color: rgb(255, 110, 110);}
+    }
+
+    div > .navMenu > li > a:hover {
+      color: $color-white;
+    }
+    div > .navMenu > li:not(:first-child) {
+      padding-left: 50px;
+      @include extraSmallThruMediumBreakpoints {
+        padding-left: 0;
+      }
+    }
+    div > .navMenu > li:last-child {
+      @include extraSmallThruMediumBreakpoints {
+        margin-bottom: 30px;
+      }
+    }
+    div > .navMenu.navShowing {
+      @include extraSmallThruMediumBreakpoints {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        background-color: $primary-color;
+      }
+    }
+    div > .navMenu.navShowing > li {
+      @include extraSmallThruMediumBreakpoints {
+        width: 100%;
+        padding: 2rem 0;
+        text-align: center;
+      }
+    }
+    div > .navMenu.navNotShowing > li {
+      @include extraSmallThruMediumBreakpoints {
+        display: none;
+      }
+    }
+    .gradient-link::after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 4px;
+      right: 0;
+      position: absolute;
+      background: linear-gradient(to left, $color-orange, $color-pink, $color-blue, $color-seafoam 100%);
+      background-size: 200% 200%;
+      transition: width .5s ease 0s, right .5s ease 0s;
+      animation: gradient 10s ease infinite;
+      width: 0;
+    }
+      .nav-links {
+        text-transform: uppercase;
+      }
+    div > a, .gradient-link {
+      color: $color-white;
+      position: relative;
+      padding-bottom: 7px;
+      &:hover:after {
+        left: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+.hamburger-icon, #hamburger-icon {
+  display: none;
+  margin: 0;
+  color: $color-white;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  font-size: 1.5rem;
+  @include extraSmallThruMediumBreakpoints {
+    display: block;
+    margin-top: -2px;
+  }
+}

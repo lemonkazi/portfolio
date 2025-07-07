@@ -1,0 +1,81 @@
+@import '../../styles/_variables';
+@import '../../styles/_animations';
+@import '../../styles/_mixins';
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &_description {
+    background: white;
+    padding: 50px 45px;
+
+    .title {
+
+    }
+
+    .overview {
+      margin-top: 50px;
+
+      p {
+        font-size: 17px;
+      }
+    }
+
+    .solution {
+      margin-top: 20px;
+
+      p {
+        font-size: 17px;
+      }
+    }
+
+    .duration {
+      margin-top: 20px;
+
+      p {
+        font-size: 17px;
+      }
+    }
+
+    .skill {
+      margin-top: 20px;
+
+      &-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        p {
+          font-size: 17px;
+        }
+      }
+    }
+  }
+
+  &_carousel {
+    padding: 50px 150px;
+    background: #e8eaff;
+
+    .image_item {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    // .carousel .control-prev.control-arrow:before {
+    //   border-right: 15px solid #f00;
+    // }
+
+    // .carousel .control-next.control-arrow:before {
+    //   border-left: 15px solid #f00;
+    // }
+  }
+}
+
+@include extraSmallThruMediumBreakpoints {
+  .project-content {
+    &_carousel {
+      padding: 10px 30px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@import '../../styles/_variables';
+@import '../../styles/_mixins';
+
+#logo > a {
+  @include extraSmallBreakpoint {
+    text-align: left;
+    padding-bottom: 1rem;
+    margin: 2% 0 0 0;
+    font-size: 1rem;
+  }
+}
+.logo {
+  color: $color-white;
+  &:hover {
+    color: $color-white;
+  }
+}

@@ -1,0 +1,47 @@
+.client-review {
+  .title {
+    margin: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .description {
+    color: #cd97ff;
+    font-size: 16px;
+    margin: 20px;
+  }
+
+  .client-carousel {
+    color: white;
+
+    .per-review {
+      font-size: 15px;
+      padding: 0 120px;
+      line-height: 30px;
+    }
+
+    .per-info {
+      padding: 50px 0;
+
+      .per-client-avatar {
+        margin-top: 10px;
+      }
+
+      .per-client-name {
+        font-size: 15px;
+        margin-top: 30px;
+      }
+
+      .per-client-position {
+        font-size: 15px;
+        margin-top: 30px;
+      }
+
+      .per-rate {
+        font-size: 15px;
+        margin-top: 10px;
+      }
+    }
+  }
+}

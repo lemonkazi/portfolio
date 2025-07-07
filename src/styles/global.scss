@@ -1,0 +1,131 @@
+@import './_variables';
+@import './_animations';
+@import './_mixins';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: $font-stack;
+  font-size: 1.4rem;
+  color: $primary-color;
+  @include extraSmallBreakpoint {
+    font-size: 1rem;
+  }
+}
+.header-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #191d2b;
+  border-bottom: 1px solid #4a4a4a;
+  .gradient-header {
+    top: 0;
+    background: linear-gradient(-45deg, $color-orange, $color-pink, $color-blue, $color-seafoam);
+    background-size: 200% 200%;
+    animation: gradient 10s ease infinite;
+    height: 2px;
+  }
+}
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1% 0 1%;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: $primary-color;
+  &:hover {
+    color: $primary-color;
+  }
+}
+.angle-nav {
+  border: none;
+  background-color: #000000;
+}
+.angle-welcome {
+  height: 150px;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  border: none;
+  background-color: #000000;
+  margin-top: -.5px;
+}
+.angle-nav {
+  border: none;
+  background-color: #000000;
+}
+.angle-contact {
+  background-color: #000000;
+  height: 150px;
+  clip-path: polygon(100% 100%, 0 100%, 0 0);
+  border: none;
+  margin: 5% 0 -.5px 0;
+}
+.blur {
+  filter: blur(5px) brightness(0.7);
+  pointer-events: none;
+  user-select: none;
+  transition: all .25s;
+}
+#main {
+  padding-top: 65px;
+  display: flex;
+  background-color: #191d2b;
+
+  aside {
+    width: 450px;
+    @include extraSmallThruMediumBreakpoints {
+      display: none;
+    }
+  }
+
+  section {
+    flex: 1 0;
+    @include extraSmallThruMediumBreakpoints {
+      width: 100%;
+    }
+  }
+}
+
+h1, h3, .subtitle {
+  font-family: 'Noto Serif', serif;
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.subtitle {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+@include mediumBreakpointOnward {
+  .blur {
+    filter: none;
+    pointer-events: initial;
+    user-select: initial;
+    transition: none;
+  }
+}
+
+@include extraSmallThruMediumBreakpoints {
+  #main {
+    padding-top: 25px;
+  }
+}
+
+

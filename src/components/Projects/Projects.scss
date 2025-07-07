@@ -1,0 +1,33 @@
+@import '../../styles/_variables';
+@import '../../styles/_animations';
+@import '../../styles/_mixins';
+
+#projects {
+  background: black;
+  @include largeBreakpoint {
+    padding-bottom: 1rem;
+  }
+  @include extraLargeBreakpoint {
+    margin: 0;
+  }
+  .wrapper > .subtitle {
+    text-align: left;
+    margin-bottom: .75rem;
+  }
+  .wrapper > .projects-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    font-size: 1.2rem;
+    padding: 50px 20px;
+    @include extraSmallThruSmallBreakpoints {
+      font-size: 1.1rem;
+    }
+    @include mediumBreakpoint {
+      font-size: 1.1rem;
+    }
+    @include extraSmallThruMediumBreakpoints {
+      grid-template-columns: 1fr;
+    }
+  }
+}

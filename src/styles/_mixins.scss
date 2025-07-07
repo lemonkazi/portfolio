@@ -1,0 +1,49 @@
+@import '../styles/variables';
+
+@mixin extraSmallBreakpoint {
+  @media (max-width: $screen-xsm) {
+    @content;
+  }
+}
+
+@mixin smallBreakpoint {
+  @media (min-width: $screen-sm-start) and (max-width: $screen-sm-end) {
+    @content;
+  }
+}
+
+@mixin extraSmallThruSmallBreakpoints {
+  @media (max-width: $screen-sm-end) {
+    @content;
+  }
+}
+
+@mixin mediumBreakpoint {
+  @media (min-width: $screen-md-start) and (max-width: $screen-md-end) {
+    @content;
+  }
+}
+
+@mixin extraSmallThruMediumBreakpoints {
+  @media (max-width: $screen-md-end) {
+    @content;
+  }
+}
+
+@mixin mediumBreakpointOnward {
+  @media (min-width: $screen-l-start) {
+    @content;
+  }
+}
+
+@mixin largeBreakpoint {
+  @media (min-width: $screen-l-start) and (max-width: $screen-l-end) {
+    @content;
+  }
+}
+
+@mixin extraLargeBreakpoint {
+  @media (min-width: $screen-xl-start) and (max-width: $screen-xl-end) {
+    @content;
+  }
+}

@@ -1,0 +1,37 @@
+.home-placeholder {
+  height: 500px;
+  background-image: url("../../../assets/place-back.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 100px;
+  filter: blur(5px);
+}
+
+.home-placeholder-text{
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  .title-one {
+    color: white;
+    font-size: 35px;
+  }
+
+  .title-two {
+    color: white;
+  }
+
+  .title-btn {
+    margin-top: 35px;
+
+    button {
+      padding: 10px 20px;
+      background: #355ff5;
+      border: none;
+      border-radius: 5px;
+      color: white;
+    }
+  }
+}
