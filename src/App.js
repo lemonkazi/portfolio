@@ -42,20 +42,20 @@ function App() {
   //       window.removeEventListener("resize", handleResizeEvent);
   //     }
   //   }, [isLargeBreakpoint]);
-  // useEffect(() => {
-  //   // Include the Crisp code here, without the <script></script> tags
-  //   window.$crisp = [];
-  //   window.CRISP_WEBSITE_ID = 'c8c3562c-d7db-41a2-bee1-9b62834059ba';
+  useEffect(() => {
+    // Include the Crisp code here, without the <script></script> tags
+    window.$crisp = [];
+    window.CRISP_WEBSITE_ID = process.env.REACT_APP_CRISP_WEBSITE_ID;
 
-  //   (function () {
-  //     var d = document;
-  //     var s = d.createElement('script');
+    (function () {
+      var d = document;
+      var s = d.createElement('script');
 
-  //     s.src = 'https://client.crisp.chat/l.js';
-  //     s.async = 1;
-  //     d.getElementsByTagName('head')[0].appendChild(s);
-  //   })();
-  // }, []);
+      s.src = 'https://client.crisp.chat/l.js';
+      s.async = 1;
+      d.getElementsByTagName('head')[0].appendChild(s);
+    })();
+  }, []);
 
   return (
     <div className="App">

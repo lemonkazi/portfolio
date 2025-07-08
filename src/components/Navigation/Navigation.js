@@ -46,7 +46,7 @@ export default function Navigation({
             }
           >
             {navigationItems.map((navItem, index) =>
-              index !== 0 ? (
+              (
                 <li
                   key={index}
                   onClick={() => {
@@ -55,14 +55,6 @@ export default function Navigation({
                 >
                   {navItem.label}
                 </li>
-              ) : (
-                <a
-                  href="https://calendly.com/lemonkazi/30min"
-                  target="_blank"
-                  className="schedule-time"
-                >
-                  Schedule Time
-                </a>
               )
             )}
           </ul>

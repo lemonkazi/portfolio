@@ -10,6 +10,9 @@
   background: rgb(14, 14, 14);
   padding: 100px;
   color: rgb(221, 212, 212);
+  @include extraSmallThruMediumBreakpoints {
+    padding: 30px;
+  }
 
   &--summary {
     font-size: 18px;
