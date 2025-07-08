@@ -1,4 +1,5 @@
 import React from 'react';
+import Meta from '../Meta/Meta'; // Import the Meta component
 import HomePlaceholder from './HomePlaceholder/HomePlaceholder';
 import ClientReview from './ClientReview/ClientReview';
 import AnyQuestions from './AnyQuestions/AnyQuestions';
@@ -12,6 +13,7 @@ export default function Projects() {
 
   return (
     <section id="home">
+      <Meta title="Home - Kazi Mamun" description="Welcome to the homepage of Kazi Mamun's resume website." />
       <div className="home-container">
         <div>
           <HomePlaceholder />

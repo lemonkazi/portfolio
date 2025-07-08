@@ -1,9 +1,15 @@
+@import '../../styles/_variables';
+@import '../../styles/_animations';
+@import '../../styles/_mixins';
+
 .aside {
   padding: 40px 20px;
   color: white;
   height: 100%;
   min-width: 450px;
-
+  @include extraSmallThruMediumBreakpoints {
+    min-width: 100%;
+  }
   &-logo {
     display: flex;
     flex-direction: column;
@@ -128,5 +134,8 @@
     color: #bdbdbd;
     font-weight: 300;
     font-size: 14px;
+    @include extraSmallThruMediumBreakpoints {
+      display: none;
+    }
   }
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Meta from '../Meta/Meta'; // Import the Meta component
 import './Resume.scss';
 
 export default function Resume() {
@@ -7,6 +8,7 @@ export default function Resume() {
 
   return (
     <div className="resume-layout">
+      <Meta title="Resume - Kazi Mamun" description="View the resume of Kazi Mamun, a full-stack web developer." />
       <div className="resume-layout--summary">
         <h4 className="">Summary</h4>
         <hr />

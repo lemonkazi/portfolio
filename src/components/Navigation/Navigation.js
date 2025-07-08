@@ -51,6 +51,7 @@ export default function Navigation({
                   key={index}
                   onClick={() => {
                     navigate(`${navItem.url}`);
+                    setIsNavFull(!isNavFull);
                   }}
                 >
                   {navItem.label}

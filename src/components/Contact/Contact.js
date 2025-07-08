@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Meta from '../Meta/Meta'; // Import the Meta component
 import './Contact.scss';
 
 export default function Contact() {
@@ -7,6 +8,7 @@ export default function Contact() {
 
   return (
     <div className="contact-layout">
+      <Meta title="Contact - Kazi Mamun" description="Contact Kazi Mamun for any inquiries or opportunities." />
       <div className="contact-layout--summary">
         <h4 className="">Contact</h4>
         <hr />

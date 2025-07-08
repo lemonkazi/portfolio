@@ -13,6 +13,7 @@ import './styles/global.scss';
 import Contact from './components/Contact/Contact';
 
 function App() {
+  const location = useLocation();
   const [isNavFull, setIsNavFull] = useState(false);
   // const [isLargeBreakpoint, setIsLargeBreakpoint] = useState(window.innerWidth > 768);
   // const [isLargeBreakpoint, setIsLargeBreakpoint] = useState(false);
@@ -57,6 +58,9 @@ function App() {
     })();
   }, []);
 
+  const routeName = location.pathname.substring(1);
+  const mainClassName = `${isNavFull ? 'blur' : ''} ${routeName}`.trim();
+
   return (
     <div className="App">
       <header id="#top" className="header-section">
@@ -70,7 +74,7 @@ function App() {
           />
         </div>
       </header>
-      <main id="main" className={isNavFull ? 'blur' : ''}>
+      <main id="main" className={mainClassName}>
         <Routes>
           <Route path="/" element={<Navigate replace to="/resume" />} />
           <Route

@@ -78,6 +78,13 @@ a {
   user-select: none;
   transition: all .25s;
 }
+.projects {
+  aside {
+    @include extraSmallThruMediumBreakpoints {
+      display: none;
+    }
+  }
+}
 #main {
   padding-top: 65px;
   display: flex;
@@ -86,7 +93,7 @@ a {
   aside {
     width: 450px;
     @include extraSmallThruMediumBreakpoints {
-      display: none;
+      width: 100%;
     }
   }
 
@@ -125,6 +132,7 @@ h2 {
 @include extraSmallThruMediumBreakpoints {
   #main {
     padding-top: 25px;
+    display: block;
   }
 }
 
