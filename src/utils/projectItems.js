@@ -15,7 +15,7 @@ import rockBuilder6 from '../assets/skyticket.png';
 import rockBuilder7 from '../assets/skyticket.png';
 
 import rockMasonsport1 from '../assets/skyticket.png';
-import rockMasonsport2 from '../assets/skyticket.png';
+import rockMasonsport2 from '../assets/skyticket_1.png';
 import rockMasonsport3 from '../assets/skyticket.png';
 import rockMasonsport4 from '../assets/skyticket.png';
 import rockMasonsport5 from '../assets/skyticket.png';
@@ -68,7 +68,7 @@ export const projectItems = [
     jpg: `${rockMasonsport}`,
     overview: [
       `${rockMasonsport1}`,
-      // `${rockMasonsport2}`,
+      `${rockMasonsport2}`,
       // `${rockMasonsport3}`,
       // `${rockMasonsport4}`,
       // `${rockMasonsport5}`,
