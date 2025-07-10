@@ -1,6 +1,13 @@
 import React from 'react';
 import moment from 'moment-timezone';
 import logoImg from '../../assets/lemonkazi.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faLinkedin,
+  faGithub
+} from '@fortawesome/free-brands-svg-icons';
+import { faCertificate } from '@fortawesome/free-solid-svg-icons';
+
 import './SideBar.scss';
 
 const SideBar = () => {
@@ -20,9 +27,37 @@ const SideBar = () => {
               Dhaka, Bangladesh -{' '}
               {moment().tz('Astana/Dhaka').format('h:mm a')}
             </span>
-            <span style={{ color: '#f3ff9b' }}>
+            {/* <span style={{ color: '#f3ff9b' }}>
               I'm available in the Bangladesh time zone (UTC+6).
-            </span>
+            </span> */}
+            {/* ✅ New: Social & Certifications */}
+            <div style={{ marginTop: '10px' }}>
+              {/* Social icons side by side */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '10px' }}>
+                <a
+                  href="https://www.linkedin.com/in/lemonkazi-fullstack-developer/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} size="lg" />
+                </a>
+
+                <a
+                  href="https://github.com/lemonkazi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={faGithub} size="lg" />
+                </a>
+              </div>
+
+              {/* Certifications in a separate line */}
+              <div>
+                <FontAwesomeIcon icon={faCertificate} style={{ marginRight: '8px' }} />
+                <span>Certifications: Certified Scrum Master (CSM)</span>
+              </div>
+            </div>
+
           </div>
         </div>
         <div className="aside-summary">

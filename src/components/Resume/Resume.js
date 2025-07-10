@@ -68,7 +68,7 @@ export default function Resume() {
             <h4 className="">Adventure Dhaka Limited · Full-time (On Site)</h4>
           </div>
           <div>
-            <h2 className="">October 2024 - June 2025</h2>
+            <h2 className="">October 2024 - Current</h2>
           </div>
         </div>
         <br />
